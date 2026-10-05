@@ -2,7 +2,7 @@ public class VectorRenderer  implements Renderer{
 
     @Override
     public String renderCircle(int radius) {
-        return "VECTOR circle radius" + radius;
+        return "VECTOR circle radius=" + radius;
 
     }
 

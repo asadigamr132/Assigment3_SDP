@@ -156,7 +156,52 @@ public class Main {
         }
 
 
+        Shape circleAscii = new Circle(
+                4,
+                2,
+                new AsciiRenderer()
+        );
 
+        String t6Actual = circleAscii.execute();
+        String t6Expected = "ASCII circle radius=2";
+
+        boolean t6 = t6Actual.equals(t6Expected);
+
+        printResult(
+                "T6",
+                t6,
+                "Circle + AsciiRenderer",
+                t6Actual,
+                t6Expected
+        );
+
+        if (t6) {
+            passed++;
+        }
+
+
+        Shape squareAscii = new Square(
+                5,
+                3,
+                new AsciiRenderer()
+        );
+
+        String t7Actual = squareAscii.execute();
+        String t7Expected = "ASCII square side=3";
+
+        boolean t7 = t7Actual.equals(t7Expected);
+
+        printResult(
+                "T7",
+                t7,
+                "Square + AsciiRenderer",
+                t7Actual,
+                t7Expected
+        );
+
+        if (t7) {
+            passed++;
+        }
 
         System.out.println(
                 "SUMMARY: " + passed + "/" + total + " PASS"
